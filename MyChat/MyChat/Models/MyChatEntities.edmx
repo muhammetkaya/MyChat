@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MyChatDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblKullanici">
+          <Key>
+            <PropertyRef Name="kullanıcıID" />
+          </Key>
+          <Property Name="kullanıcıID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanıcıAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="kullaniciEposta" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="kullaniciSifre" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="kullaniciSonGirisTarihi" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblMesajlar">
+          <Key>
+            <PropertyRef Name="mesajID" />
+          </Key>
+          <Property Name="mesajID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mesajMetni" Type="text" Nullable="false" />
+          <Property Name="gonderenID" Type="int" Nullable="false" />
+          <Property Name="sohbetID" Type="int" Nullable="false" />
+          <Property Name="gonderilmeTarihi" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSohbetler">
+          <Key>
+            <PropertyRef Name="sohbetID" />
+          </Key>
+          <Property Name="sohbetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sohbetAdi" Type="int" Nullable="false" />
+          <Property Name="sohbetUyeListesiID" Type="int" Nullable="false" />
+          <Property Name="sohbetOlusturulmaTarihi" Type="datetime" Nullable="false" />
+          <Property Name="sohbetTipID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSohbetListeleri">
+          <Key>
+            <PropertyRef Name="sohbetUyeListesiID" />
+          </Key>
+          <Property Name="sohbetUyeListesiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanıcıID" Type="int" Nullable="false" />
+          <Property Name="dahilOlmaTarihi" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSohbetTipleri">
+          <Key>
+            <PropertyRef Name="sohbetTipID" />
+          </Key>
+          <Property Name="sohbetTipID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tip" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MyChatDBModelStoreContainer">
+          <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMesajlar" EntityType="Self.tblMesajlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSohbetler" EntityType="Self.tblSohbetler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSohbetListeleri" EntityType="Self.tblSohbetListeleri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSohbetTipleri" EntityType="Self.tblSohbetTipleri" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyChatDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblKullanici">
+          <Key>
+            <PropertyRef Name="kullanıcıID" />
+          </Key>
+          <Property Name="kullanıcıID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanıcıAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="kullaniciEposta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="kullaniciSifre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="kullaniciSonGirisTarihi" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblMesajlar">
+          <Key>
+            <PropertyRef Name="mesajID" />
+          </Key>
+          <Property Name="mesajID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mesajMetni" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gonderenID" Type="Int32" Nullable="false" />
+          <Property Name="sohbetID" Type="Int32" Nullable="false" />
+          <Property Name="gonderilmeTarihi" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblSohbetler">
+          <Key>
+            <PropertyRef Name="sohbetID" />
+          </Key>
+          <Property Name="sohbetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sohbetAdi" Type="Int32" Nullable="false" />
+          <Property Name="sohbetUyeListesiID" Type="Int32" Nullable="false" />
+          <Property Name="sohbetOlusturulmaTarihi" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="sohbetTipID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSohbetListeleri">
+          <Key>
+            <PropertyRef Name="sohbetUyeListesiID" />
+          </Key>
+          <Property Name="sohbetUyeListesiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanıcıID" Type="Int32" Nullable="false" />
+          <Property Name="dahilOlmaTarihi" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblSohbetTipleri">
+          <Key>
+            <PropertyRef Name="sohbetTipID" />
+          </Key>
+          <Property Name="sohbetTipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MyChatDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" />
+          <EntitySet Name="tblMesajlar" EntityType="Self.tblMesajlar" />
+          <EntitySet Name="tblSohbetler" EntityType="Self.tblSohbetler" />
+          <EntitySet Name="tblSohbetListeleri" EntityType="Self.tblSohbetListeleri" />
+          <EntitySet Name="tblSohbetTipleri" EntityType="Self.tblSohbetTipleri" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyChatDBModelStoreContainer" CdmEntityContainer="MyChatDBEntities">
+          <EntitySetMapping Name="tblKullanici">
+            <EntityTypeMapping TypeName="MyChatDBModel.tblKullanici">
+              <MappingFragment StoreEntitySet="tblKullanici">
+                <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+                <ScalarProperty Name="kullanıcıAdi" ColumnName="kullanıcıAdi" />
+                <ScalarProperty Name="kullaniciEposta" ColumnName="kullaniciEposta" />
+                <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+                <ScalarProperty Name="kullaniciSonGirisTarihi" ColumnName="kullaniciSonGirisTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMesajlar">
+            <EntityTypeMapping TypeName="MyChatDBModel.tblMesajlar">
+              <MappingFragment StoreEntitySet="tblMesajlar">
+                <ScalarProperty Name="mesajID" ColumnName="mesajID" />
+                <ScalarProperty Name="mesajMetni" ColumnName="mesajMetni" />
+                <ScalarProperty Name="gonderenID" ColumnName="gonderenID" />
+                <ScalarProperty Name="sohbetID" ColumnName="sohbetID" />
+                <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSohbetler">
+            <EntityTypeMapping TypeName="MyChatDBModel.tblSohbetler">
+              <MappingFragment StoreEntitySet="tblSohbetler">
+                <ScalarProperty Name="sohbetID" ColumnName="sohbetID" />
+                <ScalarProperty Name="sohbetAdi" ColumnName="sohbetAdi" />
+                <ScalarProperty Name="sohbetUyeListesiID" ColumnName="sohbetUyeListesiID" />
+                <ScalarProperty Name="sohbetOlusturulmaTarihi" ColumnName="sohbetOlusturulmaTarihi" />
+                <ScalarProperty Name="sohbetTipID" ColumnName="sohbetTipID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSohbetListeleri">
+            <EntityTypeMapping TypeName="MyChatDBModel.tblSohbetListeleri">
+              <MappingFragment StoreEntitySet="tblSohbetListeleri">
+                <ScalarProperty Name="sohbetUyeListesiID" ColumnName="sohbetUyeListesiID" />
+                <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+                <ScalarProperty Name="dahilOlmaTarihi" ColumnName="dahilOlmaTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSohbetTipleri">
+            <EntityTypeMapping TypeName="MyChatDBModel.tblSohbetTipleri">
+              <MappingFragment StoreEntitySet="tblSohbetTipleri">
+                <ScalarProperty Name="sohbetTipID" ColumnName="sohbetTipID" />
+                <ScalarProperty Name="Tip" ColumnName="Tip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

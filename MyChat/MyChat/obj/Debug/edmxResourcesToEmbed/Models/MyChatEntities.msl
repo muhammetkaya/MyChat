@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyChatDBModelStoreContainer" CdmEntityContainer="MyChatDBEntities">
+    <EntitySetMapping Name="tblKullanici">
+      <EntityTypeMapping TypeName="MyChatDBModel.tblKullanici">
+        <MappingFragment StoreEntitySet="tblKullanici">
+          <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+          <ScalarProperty Name="kullanıcıAdi" ColumnName="kullanıcıAdi" />
+          <ScalarProperty Name="kullaniciEposta" ColumnName="kullaniciEposta" />
+          <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+          <ScalarProperty Name="kullaniciSonGirisTarihi" ColumnName="kullaniciSonGirisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMesajlar">
+      <EntityTypeMapping TypeName="MyChatDBModel.tblMesajlar">
+        <MappingFragment StoreEntitySet="tblMesajlar">
+          <ScalarProperty Name="mesajID" ColumnName="mesajID" />
+          <ScalarProperty Name="mesajMetni" ColumnName="mesajMetni" />
+          <ScalarProperty Name="gonderenID" ColumnName="gonderenID" />
+          <ScalarProperty Name="sohbetID" ColumnName="sohbetID" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSohbetler">
+      <EntityTypeMapping TypeName="MyChatDBModel.tblSohbetler">
+        <MappingFragment StoreEntitySet="tblSohbetler">
+          <ScalarProperty Name="sohbetID" ColumnName="sohbetID" />
+          <ScalarProperty Name="sohbetAdi" ColumnName="sohbetAdi" />
+          <ScalarProperty Name="sohbetUyeListesiID" ColumnName="sohbetUyeListesiID" />
+          <ScalarProperty Name="sohbetOlusturulmaTarihi" ColumnName="sohbetOlusturulmaTarihi" />
+          <ScalarProperty Name="sohbetTipID" ColumnName="sohbetTipID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSohbetListeleri">
+      <EntityTypeMapping TypeName="MyChatDBModel.tblSohbetListeleri">
+        <MappingFragment StoreEntitySet="tblSohbetListeleri">
+          <ScalarProperty Name="sohbetUyeListesiID" ColumnName="sohbetUyeListesiID" />
+          <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+          <ScalarProperty Name="dahilOlmaTarihi" ColumnName="dahilOlmaTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSohbetTipleri">
+      <EntityTypeMapping TypeName="MyChatDBModel.tblSohbetTipleri">
+        <MappingFragment StoreEntitySet="tblSohbetTipleri">
+          <ScalarProperty Name="sohbetTipID" ColumnName="sohbetTipID" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

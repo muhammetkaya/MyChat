@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyChatDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblKullanici">
+    <Key>
+      <PropertyRef Name="kullanıcıID" />
+    </Key>
+    <Property Name="kullanıcıID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanıcıAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kullaniciEposta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kullaniciSifre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kullaniciSonGirisTarihi" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblMesajlar">
+    <Key>
+      <PropertyRef Name="mesajID" />
+    </Key>
+    <Property Name="mesajID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mesajMetni" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gonderenID" Type="Int32" Nullable="false" />
+    <Property Name="sohbetID" Type="Int32" Nullable="false" />
+    <Property Name="gonderilmeTarihi" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblSohbetler">
+    <Key>
+      <PropertyRef Name="sohbetID" />
+    </Key>
+    <Property Name="sohbetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sohbetAdi" Type="Int32" Nullable="false" />
+    <Property Name="sohbetUyeListesiID" Type="Int32" Nullable="false" />
+    <Property Name="sohbetOlusturulmaTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sohbetTipID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSohbetListeleri">
+    <Key>
+      <PropertyRef Name="sohbetUyeListesiID" />
+    </Key>
+    <Property Name="sohbetUyeListesiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="dahilOlmaTarihi" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblSohbetTipleri">
+    <Key>
+      <PropertyRef Name="sohbetTipID" />
+    </Key>
+    <Property Name="sohbetTipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MyChatDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" />
+    <EntitySet Name="tblMesajlar" EntityType="Self.tblMesajlar" />
+    <EntitySet Name="tblSohbetler" EntityType="Self.tblSohbetler" />
+    <EntitySet Name="tblSohbetListeleri" EntityType="Self.tblSohbetListeleri" />
+    <EntitySet Name="tblSohbetTipleri" EntityType="Self.tblSohbetTipleri" />
+  </EntityContainer>
+</Schema>
