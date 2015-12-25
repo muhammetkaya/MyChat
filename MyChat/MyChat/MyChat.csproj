@@ -132,6 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\eSohbetTipi.cs">
+      <DependentUpon>MyChatEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MyChatEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,18 +153,23 @@
     <Compile Include="Models\tblKullanici.cs">
       <DependentUpon>MyChatEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblKullaniciMetadata.cs" />
     <Compile Include="Models\tblMesajlar.cs">
       <DependentUpon>MyChatEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblMesajlarMetadata.cs" />
     <Compile Include="Models\tblSohbetler.cs">
       <DependentUpon>MyChatEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSohbetlerMetadata.cs" />
     <Compile Include="Models\tblSohbetListeleri.cs">
       <DependentUpon>MyChatEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSohbetListeleriMetadata.cs" />
     <Compile Include="Models\tblSohbetTipleri.cs">
       <DependentUpon>MyChatEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSohbetTipleriMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

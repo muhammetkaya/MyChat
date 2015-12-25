@@ -10,14 +10,11 @@
 namespace MyChat.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class tblSohbetler
+    public enum eSohbetTipi : short
     {
-        public int sohbetID { get; set; }
-        public int sohbetAdi { get; set; }
-        public int sohbetUyeListesiID { get; set; }
-        public System.DateTime sohbetOlusturulmaTarihi { get; set; }
-        public eSohbetTipi sohbetTipID { get; set; }
+        İkiliSohbeti = 0,
+        GrupOzelSohbeti = 1,
+        GrupAcıkSohbet = 2
     }
 }

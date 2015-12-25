@@ -28,7 +28,7 @@
     <Property Name="sohbetAdi" Type="Int32" Nullable="false" />
     <Property Name="sohbetUyeListesiID" Type="Int32" Nullable="false" />
     <Property Name="sohbetOlusturulmaTarihi" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="sohbetTipID" Type="Int32" Nullable="false" />
+    <Property Name="sohbetTipID" Type="MyChatDBModel.eSohbetTipi" Nullable="false" />
   </EntityType>
   <EntityType Name="tblSohbetListeleri">
     <Key>
@@ -52,4 +52,9 @@
     <EntitySet Name="tblSohbetListeleri" EntityType="Self.tblSohbetListeleri" />
     <EntitySet Name="tblSohbetTipleri" EntityType="Self.tblSohbetTipleri" />
   </EntityContainer>
+  <EnumType Name="eSohbetTipi" UnderlyingType="Int16">
+    <Member Name="İkiliSohbeti" />
+    <Member Name="GrupOzelSohbeti" />
+    <Member Name="GrupAcıkSohbet" />
+  </EnumType>
 </Schema>

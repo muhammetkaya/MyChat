@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MyChatDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MyChatDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblKullanici">
           <Key>
             <PropertyRef Name="kullanıcıID" />
@@ -57,8 +57,7 @@
           <EntitySet Name="tblSohbetListeleri" EntityType="Self.tblSohbetListeleri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSohbetTipleri" EntityType="Self.tblSohbetTipleri" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MyChatDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -90,7 +89,7 @@
           <Property Name="sohbetAdi" Type="Int32" Nullable="false" />
           <Property Name="sohbetUyeListesiID" Type="Int32" Nullable="false" />
           <Property Name="sohbetOlusturulmaTarihi" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sohbetTipID" Type="Int32" Nullable="false" />
+          <Property Name="sohbetTipID" Type="MyChatDBModel.eSohbetTipi" Nullable="false" />
         </EntityType>
         <EntityType Name="tblSohbetListeleri">
           <Key>
@@ -114,6 +113,11 @@
           <EntitySet Name="tblSohbetListeleri" EntityType="Self.tblSohbetListeleri" />
           <EntitySet Name="tblSohbetTipleri" EntityType="Self.tblSohbetTipleri" />
         </EntityContainer>
+        <EnumType Name="eSohbetTipi" UnderlyingType="Int16" >
+          <Member Name="İkiliSohbeti" />
+          <Member Name="GrupOzelSohbeti" />
+          <Member Name="GrupAcıkSohbet" />
+        </EnumType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

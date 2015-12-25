@@ -39,6 +39,5 @@ C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\System.Web.WebPag
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\System.Web.WebPages.Razor.xml
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\Antlr3.Runtime.pdb
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\Newtonsoft.Json.xml
-C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\obj\Debug\MyChat.csprojResolveAssemblyReference.cache
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\obj\Debug\MyChat.dll
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\obj\Debug\MyChat.pdb
