@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\roslyn\csc.exe
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -41,3 +42,45 @@ C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\Antlr3.Runtime.pd
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\bin\Newtonsoft.Json.xml
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\obj\Debug\MyChat.dll
 C:\Users\Tuğrul Can\Documents\GitHub\MyChat\MyChat\MyChat\obj\Debug\MyChat.pdb
+=======
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\csc.exe
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\vbc.exe
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\VBCSCompiler.exe
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\MyChat.dll.config
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\MyChat.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\MyChat.pdb
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Antlr3.Runtime.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Newtonsoft.Json.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Helpers.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Mvc.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Optimization.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Razor.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.WebPages.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\WebGrease.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Helpers.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Mvc.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Optimization.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.Razor.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.WebPages.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Antlr3.Runtime.pdb
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\bin\Newtonsoft.Json.xml
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\obj\Debug\MyChat.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\obj\Debug\MyChat.dll
+C:\Users\Asus\Desktop\MyChat\MyChat\MyChat\obj\Debug\MyChat.pdb
+>>>>>>> origin/master
